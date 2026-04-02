@@ -30,9 +30,10 @@
             justify-content: center;
             gap: 16px;
         }
-        .hero-logo svg {
-            width: 64px;
-            height: 64px;
+        .hero-logo img {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
             filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
         }
         .hero-logo span {
@@ -187,9 +188,7 @@
 <body>
     <div class="hero">
         <div class="hero-logo">
-            <svg viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
-                <path d="M54,30 L78,54 L54,78 L30,54 Z" fill="white"/>
-            </svg>
+            <img src="logo.png" alt="LessonOS logo">
             Lesson<span>OS</span>
         </div>
         <p class="hero-tagline">Simple lesson management for training businesses</p>
