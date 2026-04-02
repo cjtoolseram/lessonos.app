@@ -13,12 +13,44 @@
             background: #fafbfc;
         }
 
+        /* Language toggle */
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            z-index: 10;
+            display: flex;
+            gap: 4px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 8px;
+            padding: 3px;
+        }
+        .lang-btn {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .lang-btn.active {
+            background: rgba(255,255,255,0.25);
+            color: white;
+        }
+        .lang-btn:hover {
+            color: white;
+        }
+
         /* Hero */
         .hero {
             background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
             color: white;
             text-align: center;
             padding: 80px 20px 60px;
+            position: relative;
         }
         .hero-logo {
             font-size: 3.5rem;
@@ -187,71 +219,92 @@
 </head>
 <body>
     <div class="hero">
+        <div class="lang-toggle">
+            <button class="lang-btn active" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('zh')">中文</button>
+        </div>
         <div class="hero-logo">
             <img src="logo.png" alt="LessonOS logo">
             Lesson<span>OS</span>
         </div>
-        <p class="hero-tagline">Simple lesson management for training businesses</p>
-        <p class="hero-desc">Manage students, classes, attendance, and leave requests — all from your phone. No servers, no accounts, no complexity.</p>
+        <p class="hero-tagline" data-en="Simple lesson management for training businesses" data-zh="简单易用的培训机构管理工具"></p>
+        <p class="hero-desc" data-en="Manage students, classes, attendance, and leave requests — all from your phone. No servers, no accounts, no complexity." data-zh="管理学员、课程、考勤和请假 — 全部在手机上完成。无需服务器，无需注册，简单高效。"></p>
     </div>
 
     <div class="features-section">
         <div class="features">
             <div class="feature">
                 <span class="feature-icon">&#x1F393;</span>
-                <h3>Student Management</h3>
-                <p>Track students, contact info, credit balances, and enrollment status.</p>
+                <h3 data-en="Student Management" data-zh="学员管理"></h3>
+                <p data-en="Track students, contact info, credit balances, and enrollment status." data-zh="管理学员信息、联系方式、课时余额和报名状态。"></p>
             </div>
             <div class="feature">
                 <span class="feature-icon">&#x1F4C5;</span>
-                <h3>Class Scheduling</h3>
-                <p>Set up recurring weekly classes with day-of-week and time scheduling.</p>
+                <h3 data-en="Class Scheduling" data-zh="课程排班"></h3>
+                <p data-en="Set up recurring weekly classes with day-of-week and time scheduling." data-zh="设置每周循环课程，支持按星期和时间灵活排班。"></p>
             </div>
             <div class="feature">
                 <span class="feature-icon">&#x2714;&#xFE0F;</span>
-                <h3>Quick Check-In</h3>
-                <p>One-tap attendance check-in with automatic credit deduction.</p>
+                <h3 data-en="Quick Check-In" data-zh="快速签到"></h3>
+                <p data-en="One-tap attendance check-in with automatic credit deduction." data-zh="一键签到考勤，自动扣减课时。"></p>
             </div>
             <div class="feature">
                 <span class="feature-icon">&#x1F4CB;</span>
-                <h3>Leave Management</h3>
-                <p>Handle leave requests with approval workflows.</p>
+                <h3 data-en="Leave Management" data-zh="请假管理"></h3>
+                <p data-en="Handle leave requests with approval workflows." data-zh="处理请假申请，支持审批流程。"></p>
             </div>
             <div class="feature">
                 <span class="feature-icon">&#x2601;&#xFE0F;</span>
-                <h3>Google Drive Backup</h3>
-                <p>Back up your data to your personal Google Drive for safekeeping.</p>
+                <h3 data-en="Google Drive Backup" data-zh="Google Drive 备份"></h3>
+                <p data-en="Back up your data to your personal Google Drive for safekeeping." data-zh="将数据备份到您的 Google Drive，安全可靠。"></p>
             </div>
             <div class="feature">
                 <span class="feature-icon">&#x1F4CA;</span>
-                <h3>CSV Export</h3>
-                <p>Export student lists, attendance, and rosters to spreadsheets.</p>
+                <h3 data-en="CSV Export" data-zh="CSV 导出"></h3>
+                <p data-en="Export student lists, attendance, and rosters to spreadsheets." data-zh="导出学员名单、考勤记录和花名册到电子表格。"></p>
             </div>
         </div>
     </div>
 
     <div class="who-section">
-        <h2>Built for</h2>
+        <h2 data-en="Built for" data-zh="适用于"></h2>
         <div class="who-tags">
-            <span class="who-tag">Music Schools</span>
-            <span class="who-tag">Martial Arts Studios</span>
-            <span class="who-tag">Tutoring Centers</span>
-            <span class="who-tag">Dance Academies</span>
-            <span class="who-tag">Language Schools</span>
-            <span class="who-tag">Swim Schools</span>
+            <span class="who-tag" data-en="Music Schools" data-zh="音乐学校"></span>
+            <span class="who-tag" data-en="Martial Arts Studios" data-zh="武术馆"></span>
+            <span class="who-tag" data-en="Tutoring Centers" data-zh="辅导机构"></span>
+            <span class="who-tag" data-en="Dance Academies" data-zh="舞蹈学院"></span>
+            <span class="who-tag" data-en="Language Schools" data-zh="语言学校"></span>
+            <span class="who-tag" data-en="Swim Schools" data-zh="游泳学校"></span>
         </div>
     </div>
 
     <div class="cta-section">
-        <h2>Get Started</h2>
-        <p>Available now on Google Play for Android devices.</p>
-        <a class="cta-badge" href="https://play.google.com/store/apps/details?id=com.cjtoolseram.lessonos" target="_blank">Download on Google Play</a>
+        <h2 data-en="Get Started" data-zh="立即开始"></h2>
+        <p data-en="Available now on Google Play for Android devices." data-zh="现已在 Google Play 上架，支持 Android 设备。"></p>
+        <a class="cta-badge" href="https://play.google.com/store/apps/details?id=com.cjtoolseram.lessonos" target="_blank" data-en="Download on Google Play" data-zh="在 Google Play 下载"></a>
     </div>
 
     <div class="footer">
-        <a href="https://lessonos.app/privacy.html">Privacy Policy</a>
-        <a href="mailto:cjtoolseram@gmail.com">Contact Support</a>
+        <a href="https://lessonos.app/privacy.html" data-en="Privacy Policy" data-zh="隐私政策"></a>
+        <a href="mailto:cjtoolseram@gmail.com" data-en="Contact Support" data-zh="联系支持"></a>
         <div class="copyright">&copy; 2026 LessonOS. All rights reserved.</div>
     </div>
+
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('[data-en]').forEach(function(el) {
+                el.textContent = el.getAttribute('data-' + lang);
+            });
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.textContent.trim() === (lang === 'en' ? 'EN' : '中文'));
+            });
+            document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+            localStorage.setItem('lang', lang);
+        }
+        // Auto-detect: saved preference > browser language > default EN
+        var saved = localStorage.getItem('lang');
+        var lang = saved || (navigator.language.startsWith('zh') ? 'zh' : 'en');
+        setLang(lang);
+    </script>
 </body>
 </html>
