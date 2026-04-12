@@ -183,6 +183,12 @@
             color: #5f6368;
             margin-bottom: 24px;
         }
+        .cta-badges {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
         .cta-badge {
             display: inline-block;
             background: #1a73e8;
@@ -196,6 +202,12 @@
         }
         .cta-badge:hover {
             background: #1557b0;
+        }
+        .cta-badge.apple {
+            background: #000;
+        }
+        .cta-badge.apple:hover {
+            background: #333;
         }
 
         /* Footer */
@@ -268,14 +280,34 @@
                 <p data-en="Handle leave requests with approval workflows." data-zh="处理请假申请，支持审批流程。"></p>
             </div>
             <div class="feature">
-                <span class="feature-icon">&#x2601;&#xFE0F;</span>
-                <h3 data-en="Google Drive Backup" data-zh="Google Drive 备份"></h3>
-                <p data-en="Back up your data to your personal Google Drive for safekeeping." data-zh="将数据备份到您的 Google Drive，安全可靠。"></p>
+                <span class="feature-icon">&#x1F4E6;</span>
+                <h3 data-en="Credit Packages" data-zh="课时套餐"></h3>
+                <p data-en="Create reusable credit bundles, assign to students, and track purchase history." data-zh="创建可复用课时套餐，分配给学员，追踪购买记录。"></p>
             </div>
             <div class="feature">
                 <span class="feature-icon">&#x1F4CA;</span>
-                <h3 data-en="CSV Export" data-zh="CSV 导出"></h3>
-                <p data-en="Export student lists, attendance, and rosters to spreadsheets." data-zh="导出学员名单、考勤记录和花名册到电子表格。"></p>
+                <h3 data-en="Attendance Analytics" data-zh="考勤分析"></h3>
+                <p data-en="Weekly and monthly stats, per-class breakdown, and most active students." data-zh="周/月统计、班级明细、最活跃学员排名。"></p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#x1F4F1;</span>
+                <h3 data-en="Kiosk Mode" data-zh="自助签到"></h3>
+                <p data-en="Student-facing self-check-in screen for front desk tablets." data-zh="学员自助签到屏幕，适用于前台平板。"></p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#x2601;&#xFE0F;</span>
+                <h3 data-en="Cloud Backup" data-zh="云端备份"></h3>
+                <p data-en="Back up to Google Drive (Android) or iCloud (iOS) for safekeeping." data-zh="备份到 Google Drive（安卓）或 iCloud（iOS），安全可靠。"></p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#x1F4C4;</span>
+                <h3 data-en="CSV Export & Import" data-zh="CSV 导入导出"></h3>
+                <p data-en="Export data to spreadsheets and bulk import students from CSV." data-zh="导出数据到表格，批量导入学员。"></p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">&#x1F30D;</span>
+                <h3 data-en="7 Languages" data-zh="7种语言"></h3>
+                <p data-en="English, Chinese, Japanese, Spanish, Malay, Indonesian, and French." data-zh="英语、中文、日语、西班牙语、马来语、印尼语、法语。"></p>
             </div>
         </div>
     </div>
@@ -294,8 +326,11 @@
 
     <div class="cta-section">
         <h2 data-en="Get Started" data-zh="立即开始"></h2>
-        <p data-en="Available now on Google Play for Android devices." data-zh="现已在 Google Play 上架，支持 Android 设备。"></p>
-        <a class="cta-badge" href="https://play.google.com/store/apps/details?id=com.cjtoolseram.lessonos" target="_blank" data-en="Download on Google Play" data-zh="在 Google Play 下载"></a>
+        <p data-en="Available on Google Play and the App Store." data-zh="已在 Google Play 和 App Store 上架。"></p>
+        <div class="cta-badges">
+            <a class="cta-badge" href="https://play.google.com/store/apps/details?id=com.cjtoolseram.lessonos" target="_blank" data-en="Google Play" data-zh="Google Play"></a>
+            <a class="cta-badge apple" href="https://apps.apple.com/app/lessonos/id6761799063" target="_blank" data-en="App Store" data-zh="App Store"></a>
+        </div>
     </div>
 
     <div class="footer">
