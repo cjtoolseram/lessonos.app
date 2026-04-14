@@ -167,6 +167,125 @@
             font-weight: 500;
         }
 
+        /* Pricing */
+        .pricing-section {
+            max-width: 1000px;
+            margin: 20px auto 40px;
+            padding: 0 20px;
+        }
+        .pricing-section h2 {
+            color: #1a73e8;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .pricing-sub {
+            text-align: center;
+            color: #5f6368;
+            margin-bottom: 32px;
+            font-size: 1rem;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .pricing-card.featured {
+            border: 2px solid #1a73e8;
+            transform: scale(1.03);
+        }
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #1a73e8;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .pricing-tier {
+            color: #1a73e8;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .pricing-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #202124;
+            margin-bottom: 4px;
+        }
+        .pricing-price small {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #5f6368;
+        }
+        .pricing-note {
+            color: #5f6368;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px;
+            flex-grow: 1;
+        }
+        .pricing-features li {
+            padding: 8px 0;
+            color: #3c4043;
+            font-size: 0.92rem;
+            border-bottom: 1px solid #f1f3f4;
+            display: flex;
+            align-items: start;
+            gap: 8px;
+        }
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        .pricing-features li::before {
+            content: "✓";
+            color: #1a73e8;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .pricing-features li.disabled {
+            color: #9aa0a6;
+        }
+        .pricing-features li.disabled::before {
+            content: "—";
+            color: #9aa0a6;
+        }
+        .pricing-note-box {
+            max-width: 800px;
+            margin: 32px auto 0;
+            padding: 20px;
+            background: #e8f0fe;
+            border-radius: 12px;
+            text-align: center;
+            color: #1a73e8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 720px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: none; }
+        }
+
         /* CTA */
         .cta-section {
             text-align: center;
@@ -310,6 +429,55 @@
                 <p data-en="English, Chinese, Japanese, Spanish, Malay, Indonesian, and French." data-zh="英语、中文、日语、西班牙语、马来语、印尼语、法语。"></p>
             </div>
         </div>
+    </div>
+
+    <div class="pricing-section">
+        <h2 data-en="Simple, Honest Pricing" data-zh="简单透明的价格"></h2>
+        <p class="pricing-sub" data-en="Pay once. Own it forever. No monthly fees." data-zh="一次付费，永久拥有。无月费。"></p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-tier" data-en="Free" data-zh="免费版"></div>
+                <div class="pricing-price">$0</div>
+                <div class="pricing-note" data-en="Forever free" data-zh="永久免费"></div>
+                <ul class="pricing-features">
+                    <li data-en="Up to 15 students" data-zh="最多 15 位学员"></li>
+                    <li data-en="Up to 3 classes" data-zh="最多 3 个班级"></li>
+                    <li data-en="1 credit package template" data-zh="1 个课时套餐模板"></li>
+                    <li data-en="Check-in & attendance" data-zh="签到与考勤"></li>
+                    <li data-en="Leave management (basic)" data-zh="请假管理（基础）"></li>
+                    <li data-en="Weekly analytics" data-zh="每周数据"></li>
+                    <li data-en="CSV export (students)" data-zh="CSV 导出（学员）"></li>
+                    <li data-en="Dark mode & 7 languages" data-zh="深色模式和 7 种语言"></li>
+                </ul>
+            </div>
+            <div class="pricing-card featured">
+                <span class="pricing-badge" data-en="MOST POPULAR" data-zh="最受欢迎"></span>
+                <div class="pricing-tier" data-en="Pro" data-zh="专业版"></div>
+                <div class="pricing-price">$14.99 <small data-en="one-time" data-zh="一次付费"></small></div>
+                <div class="pricing-note" data-en="Everything in Free, plus:" data-zh="包含免费版所有功能，另加："></div>
+                <ul class="pricing-features">
+                    <li data-en="Unlimited students & classes" data-zh="无限学员和班级"></li>
+                    <li data-en="Unlimited credit package templates" data-zh="无限课时套餐模板"></li>
+                    <li data-en="Full analytics (weekly, monthly, per-class)" data-zh="完整数据分析（周/月/班级）"></li>
+                    <li data-en="Leave make-up credits" data-zh="请假补课课时"></li>
+                    <li data-en="Google Drive / iCloud backup" data-zh="Google Drive / iCloud 备份"></li>
+                    <li data-en="CSV export (all data)" data-zh="CSV 导出（全部数据）"></li>
+                    <li data-en="CSV bulk import" data-zh="CSV 批量导入"></li>
+                </ul>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-tier" data-en="Business" data-zh="商务版"></div>
+                <div class="pricing-price">$29.99 <small data-en="one-time" data-zh="一次付费"></small></div>
+                <div class="pricing-note" data-en="Everything in Pro, plus:" data-zh="包含专业版所有功能，另加："></div>
+                <ul class="pricing-features">
+                    <li data-en="Self-check-in kiosk mode" data-zh="自助签到模式"></li>
+                    <li data-en="For front desk tablets" data-zh="适用于前台平板"></li>
+                    <li data-en="Early access to new features" data-zh="新功能优先体验"></li>
+                    <li data-en="Priority feature requests" data-zh="优先功能需求"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pricing-note-box" data-en="All plans are one-time purchases. Your data stays on your device — no servers, no accounts, no subscriptions. Regional pricing applies on Google Play and App Store." data-zh="所有套餐均为一次性付费。数据存储在您的设备上 — 无服务器、无需注册、无订阅费。Google Play 和 App Store 提供区域化定价。"></div>
     </div>
 
     <div class="who-section">
