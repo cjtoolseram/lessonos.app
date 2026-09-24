@@ -234,10 +234,40 @@
             font-weight: 500;
             color: #5f6368;
         }
+        .pricing-alt {
+            color: #3c4043;
+            font-size: 0.92rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .pricing-trial {
+            display: inline-block;
+            align-self: flex-start;
+            background: #e6f4ea;
+            color: #137333;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
         .pricing-note {
             color: #5f6368;
             font-size: 0.85rem;
             margin-bottom: 20px;
+        }
+        .pricing-fine {
+            color: #5f6368;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            border-top: 1px solid #f1f3f4;
+            padding-top: 12px;
+        }
+        .pricing-currency {
+            text-align: center;
+            color: #80868b;
+            font-size: 0.82rem;
+            margin-top: 28px;
         }
         .pricing-features {
             list-style: none;
@@ -272,7 +302,7 @@
         }
         .pricing-note-box {
             max-width: 800px;
-            margin: 32px auto 0;
+            margin: 16px auto 0;
             padding: 20px;
             background: #e8f0fe;
             border-radius: 12px;
@@ -433,19 +463,19 @@
 
     <div class="pricing-section">
         <h2 data-en="Simple, Honest Pricing" data-zh="简单透明的价格"></h2>
-        <p class="pricing-sub" data-en="Pay once. Own it forever. No monthly fees." data-zh="一次付费，永久拥有。无月费。"></p>
+        <p class="pricing-sub" data-en="Start free. Upgrade to Pro when your classes grow." data-zh="免费开始，课程规模扩大时再升级专业版。"></p>
         <div class="pricing-grid">
             <div class="pricing-card">
                 <div class="pricing-tier" data-en="Free" data-zh="免费版"></div>
                 <div class="pricing-price">$0</div>
-                <div class="pricing-note" data-en="Forever free" data-zh="永久免费"></div>
+                <div class="pricing-note" data-en="Free forever" data-zh="永久免费"></div>
                 <ul class="pricing-features">
                     <li data-en="Up to 15 students" data-zh="最多 15 位学员"></li>
                     <li data-en="Up to 3 classes" data-zh="最多 3 个班级"></li>
-                    <li data-en="1 credit package template" data-zh="1 个课时套餐模板"></li>
+                    <li data-en="1 credit package" data-zh="1 个课时套餐"></li>
                     <li data-en="Check-in & attendance" data-zh="签到与考勤"></li>
-                    <li data-en="Leave management (basic)" data-zh="请假管理（基础）"></li>
-                    <li data-en="Weekly analytics" data-zh="每周数据"></li>
+                    <li data-en="Leave requests & approvals" data-zh="请假申请与审批"></li>
+                    <li data-en="7-day analytics" data-zh="近 7 天数据分析"></li>
                     <li data-en="CSV export (students)" data-zh="CSV 导出（学员）"></li>
                     <li data-en="Dark mode & 7 languages" data-zh="深色模式和 7 种语言"></li>
                 </ul>
@@ -453,31 +483,33 @@
             <div class="pricing-card featured">
                 <span class="pricing-badge" data-en="MOST POPULAR" data-zh="最受欢迎"></span>
                 <div class="pricing-tier" data-en="Pro" data-zh="专业版"></div>
-                <div class="pricing-price">$14.99 <small data-en="one-time" data-zh="一次付费"></small></div>
+                <div class="pricing-price">$4.99 <small data-en="/ month" data-zh="/ 月"></small></div>
+                <div class="pricing-alt" data-en="or $39.99 / year (save 33%)" data-zh="或 $39.99 / 年（节省 33%）"></div>
+                <span class="pricing-trial" data-en="7-day free trial" data-zh="7 天免费试用"></span>
                 <div class="pricing-note" data-en="Everything in Free, plus:" data-zh="包含免费版所有功能，另加："></div>
                 <ul class="pricing-features">
-                    <li data-en="Unlimited students & classes" data-zh="无限学员和班级"></li>
-                    <li data-en="Unlimited credit package templates" data-zh="无限课时套餐模板"></li>
-                    <li data-en="Full analytics (weekly, monthly, per-class)" data-zh="完整数据分析（周/月/班级）"></li>
-                    <li data-en="Leave make-up credits" data-zh="请假补课课时"></li>
-                    <li data-en="Google Drive / iCloud backup" data-zh="Google Drive / iCloud 备份"></li>
-                    <li data-en="CSV export (all data)" data-zh="CSV 导出（全部数据）"></li>
-                    <li data-en="CSV bulk import" data-zh="CSV 批量导入"></li>
+                    <li data-en="Unlimited students, classes & credit packages" data-zh="无限学员、班级和课时套餐"></li>
+                    <li data-en="Full analytics: 30- and 90-day trends, top attendees" data-zh="完整数据分析：30 天和 90 天趋势、出勤最多学员"></li>
+                    <li data-en="Make-up credits for approved leaves" data-zh="批准请假后发放补课课时"></li>
+                    <li data-en="Kiosk mode for front-desk self check-in" data-zh="前台自助签到模式"></li>
+                    <li data-en="CSV import & full data export" data-zh="CSV 导入和全部数据导出"></li>
+                    <li data-en="Backup & restore: Google Drive (Android), iCloud (iOS)" data-zh="备份与恢复：Google Drive（安卓）、iCloud（iOS）"></li>
                 </ul>
+                <div class="pricing-fine" data-en="Monthly or yearly subscription. Free trial for new subscribers. Renews automatically; cancel anytime in Google Play or the App Store." data-zh="按月或按年订阅。新订阅用户可免费试用。订阅自动续期，可随时在 Google Play 或 App Store 中取消。"></div>
             </div>
             <div class="pricing-card">
-                <div class="pricing-tier" data-en="Business" data-zh="商务版"></div>
-                <div class="pricing-price">$29.99 <small data-en="one-time" data-zh="一次付费"></small></div>
-                <div class="pricing-note" data-en="Everything in Pro, plus:" data-zh="包含专业版所有功能，另加："></div>
+                <div class="pricing-tier" data-en="Lifetime" data-zh="终身版"></div>
+                <div class="pricing-price">$79.99 <small data-en="one-time" data-zh="一次性付费"></small></div>
+                <div class="pricing-note" data-en="All of Pro, paid once" data-zh="专业版全部功能，一次付清"></div>
                 <ul class="pricing-features">
-                    <li data-en="Self-check-in kiosk mode" data-zh="自助签到模式"></li>
-                    <li data-en="For front desk tablets" data-zh="适用于前台平板"></li>
-                    <li data-en="Early access to new features" data-zh="新功能优先体验"></li>
-                    <li data-en="Priority feature requests" data-zh="优先功能需求"></li>
+                    <li data-en="Everything in Pro" data-zh="包含专业版所有功能"></li>
+                    <li data-en="One payment, never renews" data-zh="一次付费，永不续费"></li>
+                    <li data-en="Restore on a new device with the same store account" data-zh="使用同一商店账号即可在新设备上恢复"></li>
                 </ul>
             </div>
         </div>
-        <div class="pricing-note-box" data-en="All plans are one-time purchases. Your data stays on your device — no servers, no accounts, no subscriptions. Regional pricing applies on Google Play and App Store." data-zh="所有套餐均为一次性付费。数据存储在您的设备上 — 无服务器、无需注册、无订阅费。Google Play 和 App Store 提供区域化定价。"></div>
+        <p class="pricing-currency" data-en="Prices in USD; local prices vary by store region." data-zh="价格以美元计；各商店地区的当地价格可能不同。"></p>
+        <div class="pricing-note-box" data-en="Already bought Pro or Business before subscriptions? You keep Pro forever, with nothing to do. Purchases are tied to your Google Play or App Store account and don't transfer between Android and iOS. Your data always stays on your device." data-zh="在推出订阅前已购买专业版或商务版？您将永久保留专业版，无需任何操作。购买与您的 Google Play 或 App Store 账号绑定，不能在安卓和 iOS 之间转移。您的数据始终保存在您的设备上。"></div>
     </div>
 
     <div class="who-section">
