@@ -55,124 +55,166 @@
         .back-link {
             margin-bottom: 20px;
         }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 15px 0;
+            font-size: 0.95rem;
+        }
+        th, td {
+            border: 1px solid #dfe3e6;
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f4f6f7;
+        }
+        .table-wrap {
+            overflow-x: auto;
+        }
     </style>
 </head>
 <body>
     <p class="back-link"><a href="https://lessonos.app">&larr; Back to LessonOS</a></p>
 
     <h1>Privacy Policy for LessonOS</h1>
-    <p class="last-updated"><strong>Last Updated:</strong> April 2, 2026</p>
+    <p class="last-updated"><strong>Last Updated:</strong> September 24, 2026</p>
 
-    <h2>Introduction</h2>
-    <p>LessonOS ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our mobile application LessonOS (the "App").</p>
+    <h2>1. Introduction</h2>
+    <p>This Privacy Policy explains what information the LessonOS mobile application for Android and iOS (the "App") handles, where it goes, and the choices you have. The App is provided by Chumphon Jan Toolseram ("we", "our", or "us"). It forms part of our <a href="https://lessonos.app/terms.html">Terms of Use</a>.</p>
 
-    <h2>Information We Collect</h2>
-    <p>LessonOS is primarily an offline application. The App itself does not collect personal information, analytics data, location data, or device identifiers. No login or account creation is required to use the App.</p>
-    <p>All data you enter into the App (students, classes, attendance records, leave requests) is stored <strong>locally on your device</strong> and is under your control.</p>
-
-    <h2>How Your Data Is Stored</h2>
-    <ul>
-        <li>All data is stored <strong>locally on your device</strong> using Android's built-in secure storage (SQLite database)</li>
-        <li>We do not operate any servers and do not have access to your data</li>
-        <li>No internet connection is required to use the core features of the App</li>
-    </ul>
-
-    <h2>Google Drive Backup (Optional Feature)</h2>
     <div class="highlight">
-        <p>LessonOS offers an optional backup feature that uses your personal Google Drive account. This section describes how the App interacts with Google user data.</p>
+        <p><strong>In short:</strong></p>
+        <ul>
+            <li>Everything you enter (students, classes, attendance, leave requests, credit packages) is stored <strong>only on your device</strong>. There is no LessonOS account and we do not run any servers, so we cannot see this data.</li>
+            <li>The App uses <strong>Google's Firebase</strong> services for usage analytics and crash reports. These collect technical and usage information about the App and your device, not the records you enter.</li>
+            <li>Backups are optional and go to <strong>your own</strong> Google Drive (Android) or iCloud (iOS).</li>
+            <li>Purchases are handled by Google Play or the Apple App Store. We never receive your payment details.</li>
+        </ul>
     </div>
 
-    <h3>What Google Data We Access</h3>
-    <p>When you choose to use the backup feature, the App requests access to the <strong>Google Drive Application Data folder</strong> (<code>drive.appdata</code> scope). This is a hidden, app-specific folder on your Google Drive that:</p>
+    <h2>2. Data you enter in the App</h2>
+    <p>Organizations, branches, coaches, students (including any contact details you type in), classes, enrollments, check-ins and attendance, leave requests, credit packages and credit purchases are stored in a local database on your device (SQLite on Android; Apple's SwiftData on iOS, stored on the device only).</p>
     <ul>
-        <li>Is only accessible by LessonOS — no other apps or users can see it</li>
-        <li>Is not visible in the regular Google Drive interface</li>
-        <li>Contains only backup files created by LessonOS</li>
+        <li>This data is <strong>not</strong> sent to us or to Firebase. We have no server that could receive it.</li>
+        <li>No login or account is needed to use the App.</li>
+        <li>It leaves your device only if you choose to back it up, export it, or if your device's own backup system copies it (see sections 5 and 6).</li>
+    </ul>
+    <p>If you record information about other people, such as students or their parents, you are responsible for having the right to do so under the privacy laws that apply to you.</p>
+
+    <h2>3. Analytics and crash reporting (Firebase)</h2>
+    <p>The App includes the following Google Firebase software development kits (SDKs), which start automatically when the App opens:</p>
+    <div class="table-wrap">
+    <table>
+        <tr><th>Service</th><th>Android</th><th>iOS</th><th>Purpose</th></tr>
+        <tr><td>Google Analytics for Firebase</td><td>Yes</td><td>Yes</td><td>Understand how many people use the App, which versions and devices they use, and how the App is used overall</td></tr>
+        <tr><td>Firebase Crashlytics</td><td>Yes</td><td>Yes</td><td>Find and fix crashes</td></tr>
+        <tr><td>Firebase Cloud Messaging</td><td>No</td><td>Included</td><td>Push messaging library. The App does not ask for notification permission and does not send you notifications.</td></tr>
+    </table>
+    </div>
+
+    <h3>What these services collect</h3>
+    <ul>
+        <li><strong>Usage events collected automatically by the Analytics SDK</strong>, such as first open, app sessions, screen views, engagement time, app updates and, where supported, in-app purchase events (product, price and currency, but no payment details). The App does not log any custom analytics events of its own.</li>
+        <li><strong>Device and app information</strong>, such as device model, operating system version, language setting, app version and country or region.</li>
+        <li><strong>Identifiers</strong>: a Firebase installation ID and an Analytics app instance ID, which are random IDs created for this installation of the App. On Android, the <strong>Android advertising ID</strong> (see below). On iOS, Google Analytics may also use the identifier for vendor (IDFV).</li>
+        <li><strong>Approximate location</strong> (such as country, region or city) that Google derives from your IP address. The App does not access your device's location (GPS) and does not request location permission.</li>
+        <li><strong>Crash reports</strong> (Crashlytics): the stack trace and state of the App at the time of a crash, device model, operating system and app version, and a Crashlytics installation ID.</li>
+    </ul>
+    <p>We do <strong>not</strong> send your name, email address, or any student, class or attendance records to Firebase, and we do not use Firebase data to identify you personally.</p>
+
+    <h3>Advertising identifiers</h3>
+    <ul>
+        <li><strong>Android:</strong> the App declares the advertising ID permission, so Google Analytics for Firebase can read your device's advertising ID. The App shows no ads. You can reset or delete your advertising ID at any time in your device settings (for example Settings &rarr; Privacy &rarr; Ads, or Settings &rarr; Google &rarr; Ads, depending on your device). If you delete it, Analytics no longer receives it.</li>
+        <li><strong>iOS:</strong> the App does not ask for App Tracking Transparency permission, so iOS does not give the App your advertising identifier (IDFA) and it is not collected. The App does not track you across other companies' apps or websites.</li>
     </ul>
 
-    <h3>How We Use Google Data</h3>
-    <p>The App uses Google Drive access <strong>solely</strong> for the following purposes:</p>
+    <h3>Google as our service provider</h3>
+    <p>Google LLC provides Firebase and processes this information on our behalf, under the Firebase terms and data processing terms. Google may process this data in the United States and other countries. To learn more, see:</p>
     <ul>
-        <li><strong>Backup:</strong> Uploading a compressed copy of your local app data (students, classes, attendance, leave requests) to your personal Google Drive</li>
-        <li><strong>Restore:</strong> Downloading a previously created backup from your Google Drive to restore your data</li>
-        <li><strong>Listing backups:</strong> Retrieving a list of your existing backups so you can choose which one to restore</li>
-        <li><strong>Cleanup:</strong> Automatically deleting the oldest backups when you have more than 5, to manage storage</li>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank">Privacy and Security in Firebase</a></li>
+        <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank">How Google uses information from sites or apps that use its services</a></li>
+    </ul>
+    <p>We use this information only to understand and improve the App and to fix problems. We do not sell it and we do not use it for advertising.</p>
+
+    <h2>4. Purchases</h2>
+    <p>LessonOS Pro is sold as an auto-renewing subscription (monthly or yearly) or a one-time lifetime purchase. Payments are processed entirely by Google Play (Android) or the Apple App Store (iOS).</p>
+    <ul>
+        <li>We never receive or store your card number, billing address or other payment details.</li>
+        <li>The App asks the store which products you own and whether a subscription or free trial is active, so it can unlock Pro. The App keeps the last known plan on your device so Pro works offline. We do not run a server to verify purchases.</li>
+        <li>Google's and Apple's handling of your purchase is governed by their own privacy policies: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>, <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a>.</li>
     </ul>
 
-    <h3>How Google Data Is Stored</h3>
+    <h2>5. Optional backup and restore (Pro)</h2>
+
+    <h3>Android: Google Drive</h3>
+    <p>If you choose to use backup on Android, you sign in with your Google account and the App asks for access to the <strong>Google Drive application data folder</strong> (<code>drive.appdata</code> scope) only. This is a hidden folder in your own Google Drive that only LessonOS can access. The App cannot see any of your other Drive files.</p>
     <ul>
-        <li>Backup files are stored in <strong>your personal Google Drive</strong> account, in the hidden app-specific folder</li>
-        <li>We do <strong>not</strong> store, copy, or retain your Google data on any servers</li>
-        <li>We do <strong>not</strong> have access to your Google Drive files — only the App on your device can access the app-specific folder</li>
-        <li>Temporary backup files created during the backup/restore process are stored in the App's cache directory and deleted immediately after the operation completes</li>
+        <li><strong>What is uploaded:</strong> a compressed backup file containing your App data (the records listed in section 2), plus basic details used to show and restore backups: the organization name, student count, backup date, app version, device model and Android version.</li>
+        <li><strong>How it is used:</strong> to create backups, list them, restore one you choose, and automatically delete the oldest backups so that no more than 5 are kept.</li>
+        <li><strong>Your Google account email</strong> is used only to connect to Drive and to show which account is connected. It is kept in the App's memory while the App is running and is not saved by the App or sent to us.</li>
+        <li>Data travels directly between your device and Google's servers over encrypted connections. It never passes through any server of ours.</li>
+        <li>Temporary files created during a backup or restore are stored in the App's cache and deleted when the operation finishes.</li>
+    </ul>
+    <p>The App's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements. We do not share Google user data with third parties, and we do not use it for advertising, analytics or to train AI or machine-learning models.</p>
+    <p>You can sign out in the App's Settings, or revoke access at any time at <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a>. Revoking access does not delete backups already stored in your Drive. You can delete them in Google Drive on the web under Settings &rarr; Manage apps &rarr; LessonOS &rarr; Options &rarr; Delete hidden app data.</p>
+
+    <h3>iOS: iCloud</h3>
+    <p>On iOS, backups are saved as files in LessonOS's own container in <strong>your iCloud Drive</strong>, under your Apple ID. They are stored by Apple under Apple's terms and privacy policy. We have no access to your iCloud account or these files. You can delete backups from the App's backup list, or manage them in your device's iCloud settings. The App does not sync your data through iCloud or CloudKit outside of the backups you create.</p>
+
+    <h2>6. Device backups and exports</h2>
+    <ul>
+        <li><strong>Android Auto Backup:</strong> the App allows Android's standard backup system. If backup is turned on for your device, Android may back up the App's data, including its database and settings, to your Google account, and restore it when you set up a new device. This is handled by Google under Google's terms, not by us. You can turn it off in your device's backup settings.</li>
+        <li><strong>iOS device backups:</strong> like most apps, the App's data may be included in your iCloud Backup or computer backup, depending on your device settings. This is handled by Apple.</li>
+        <li><strong>CSV export and import:</strong> exported files are created on your device and handed to the app or location you choose through the system share sheet or file picker. Imported files are read on your device. We do not receive either.</li>
     </ul>
 
-    <h3>How Google Data Is Shared</h3>
+    <h2>7. Who we share data with</h2>
+    <p>We do not sell or rent personal information, and we do not share it for advertising. Information reaches third parties only as described above:</p>
     <ul>
-        <li>We do <strong>not</strong> share your Google user data with any third parties</li>
-        <li>We do <strong>not</strong> use your Google user data for advertising, analytics, or any purpose other than backup and restore</li>
-        <li>We do <strong>not</strong> use your Google user data to train machine learning or AI models</li>
-        <li>Your Google data is transmitted directly between your device and Google's servers using Google's secure APIs — it never passes through our systems</li>
+        <li><strong>Google</strong>: Firebase Analytics and Crashlytics (both platforms), Google Play purchases, and Google Drive backups and Android Auto Backup if you use them.</li>
+        <li><strong>Apple</strong>: App Store purchases, and iCloud backups if you use them.</li>
+    </ul>
+    <p>We may disclose information if required by law.</p>
+
+    <h2>8. Data retention</h2>
+    <ul>
+        <li><strong>Data in the App</strong> stays on your device until you delete it, use Reset All Data in Settings, or uninstall the App.</li>
+        <li><strong>Google Drive backups</strong> stay in your Drive until you delete them. The App keeps at most 5 and deletes older ones automatically. <strong>iCloud backups</strong> stay until you delete them.</li>
+        <li><strong>Analytics data</strong> is kept by Google according to the data retention setting of our Google Analytics property. User-level data is kept for no more than 14 months; aggregated reports may be kept longer.</li>
+        <li><strong>Crash reports</strong> are kept by Crashlytics for 90 days.</li>
     </ul>
 
-    <h3>Your Control Over Google Data</h3>
+    <h2>9. Security</h2>
+    <p>Your data is protected by your device's built-in security. Communication with Google and Apple services uses encrypted connections. Because we do not run servers or keep a copy of your data, there is no LessonOS database to be breached. No method of storage or transmission is completely secure, so please protect your device with a passcode and keep backups.</p>
+
+    <h2>10. Children</h2>
+    <p>The App is a business tool for trainers, coaches and studios. It is not directed to children under 13, and we do not knowingly collect personal information from children. Records about students, who may be minors, are entered by the business using the App and stay on its device (and in any backups it chooses to make); we do not receive them. If you believe a child has provided us with personal information, contact us and we will delete it.</p>
+
+    <h2>11. Your choices and rights</h2>
     <ul>
-        <li>The backup feature is <strong>entirely optional</strong> — the App works fully without it</li>
-        <li>You can sign out of Google at any time from the App's Settings screen</li>
-        <li>You can revoke the App's access to your Google Drive at any time via <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
-        <li>Revoking access does not delete existing backup files — you can remove them by clearing the App's data in your Google Account settings</li>
+        <li><strong>Access and export</strong> your data in the App at any time, including as CSV files.</li>
+        <li><strong>Delete</strong> your data with Reset All Data in Settings, or by uninstalling the App.</li>
+        <li><strong>Advertising ID (Android):</strong> reset or delete it in your device settings.</li>
+        <li><strong>Backups:</strong> stop using them, revoke Google Drive access, or delete backup files as described in section 5.</li>
+        <li><strong>Analytics and crash reports:</strong> the App currently has no setting to turn these off. Uninstalling the App stops all collection.</li>
+        <li>Depending on where you live (for example under the GDPR in the EU/UK or state privacy laws in the US), you may have rights to access, correct, delete or object to the processing of your personal information. Because Firebase data is linked only to random installation IDs and not to your name or email, we may be unable to find data belonging to a specific person, but contact us and we will help as far as we can.</li>
     </ul>
 
-    <h2>Google Sign-In</h2>
-    <p>When you use the backup feature, the App uses Google Sign-In to authenticate your identity. The App receives:</p>
-    <ul>
-        <li>Your <strong>email address</strong> — used solely to identify your Google account for Drive API access</li>
-        <li>Your <strong>display name</strong> — shown in the App's Settings screen so you know which account is connected</li>
-    </ul>
-    <p>This information is stored only in the App's local memory and is cleared when you sign out. It is not transmitted to any servers or shared with third parties.</p>
+    <h2>12. Changes to this Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time, for example when the App changes. We will post the new version on this page and update the "Last Updated" date.</p>
 
-    <h2>In-App Purchases</h2>
-    <p>The App offers an optional in-app purchase processed through Google Play. We do not collect or store any payment information. All payment processing is handled by Google Play. For information about Google's privacy practices, please visit: <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
-
-    <h2>CSV Data Export</h2>
-    <p>The App allows you to export your data as CSV files via the Android share sheet. Exported files are created in the App's temporary cache and shared using Android's built-in sharing mechanism. We do not access, store, or transmit the exported files — they are handled entirely by your device's operating system and the receiving app you choose.</p>
-
-    <h2>Data Sharing</h2>
-    <p>We do <strong>not</strong> share any data with third parties. The App connects to external services only for:</p>
-    <ul>
-        <li><strong>Google Play</strong> — for in-app purchase verification</li>
-        <li><strong>Google Drive</strong> — for the optional backup feature (user-initiated only)</li>
-    </ul>
-
-    <h2>Data Security</h2>
-    <ul>
-        <li>All local data is stored using Android's secure storage mechanisms</li>
-        <li>Google Drive communication uses Google's secure, encrypted APIs</li>
-        <li>The App does not operate any servers or databases</li>
-        <li>Your privacy is protected by Android's built-in security features and Google's security infrastructure</li>
-    </ul>
-
-    <h2>Your Rights</h2>
-    <p>You have the right to:</p>
-    <ul>
-        <li><strong>Delete app data:</strong> Use the reset function in the App's settings, or uninstall the App to remove all local data</li>
-        <li><strong>Access your data:</strong> All your data is stored locally on your device and accessible within the App. You can also export it as CSV files.</li>
-        <li><strong>Revoke Google access:</strong> Sign out from the App or revoke permissions at <a href="https://myaccount.google.com/permissions" target="_blank">Google Account Permissions</a></li>
-        <li><strong>Delete backup data:</strong> Revoke the App's Google Drive access to prevent future backups. Existing backup files can be removed via Google Account settings.</li>
-    </ul>
-
-    <h2>Children's Privacy</h2>
-    <p>Our App is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
-
-    <h2>Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy and updating the "Last Updated" date.</p>
-
-    <h2>Contact Us</h2>
+    <h2>13. Contact us</h2>
     <div class="contact-info">
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p>If you have any questions or requests about this Privacy Policy, please contact:</p>
         <ul>
+            <li>Developer: Chumphon Jan Toolseram</li>
             <li>Email: <a href="mailto:cjtoolseram@gmail.com">cjtoolseram@gmail.com</a></li>
         </ul>
     </div>
+
+    <p><a href="https://lessonos.app/terms.html">Terms of Use</a> &middot; <a href="https://lessonos.app">lessonos.app</a></p>
 </body>
 </html>
