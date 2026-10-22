@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LessonOS - Lesson Management for Training Businesses</title>
+    <title>LessonOS — Attendance &amp; Class Credits for Coaches</title>
+    <meta name="description" content="Track class attendance, memberships and remaining credits on one phone. No login. Works offline. Free for up to 15 students. Available on iPhone and Android.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <style>
@@ -390,6 +391,33 @@
             .features { grid-template-columns: 1fr; }
             .hero-tagline { font-size: 1.1rem; }
         }
+
+        .hero-downloads { margin: 28px auto 16px; }
+        .hero-free { max-width: 620px; margin: 0 auto; font-size: .95rem; }
+        .hero-guide { display: inline-block; color: white; margin-top: 16px; text-underline-offset: 4px; }
+        .product-proof { max-width: 1040px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .eyebrow { color: #165db5; font-size: .78rem; letter-spacing: .08em; font-weight: 700; }
+        .product-proof h1 { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.2; margin: 14px 0 20px; color: #16365f; }
+        .product-proof ul { padding-left: 20px; margin: 20px 0; }
+        .product-proof li { margin: 9px 0; }
+        .device-note { font-size: .88rem; color: #596779; }
+        .product-images { display: flex; gap: 16px; align-items: flex-start; }
+        .product-images figure { flex: 1; min-width: 0; text-align: center; }
+        .product-images img { width: 100%; height: auto; border: 5px solid #15365d; border-radius: 24px; box-shadow: 0 14px 30px #16365f20; }
+        .product-images figcaption { margin-top: 12px; color: #596779; font-size: .88rem; }
+        .quick-start { max-width: 1040px; margin: 0 auto 64px; padding: 0 24px; scroll-margin-top: 24px; }
+        .quick-start h2 { text-align: center; color: #16365f; margin-bottom: 24px; }
+        .quick-start ol { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding-left: 24px; }
+        .quick-start li { padding-left: 4px; }
+        .quick-start p { color: #596779; margin-top: 8px; }
+        .features-section { margin-top: 0; }
+        @media (max-width: 700px) {
+            .product-proof { grid-template-columns: 1fr; gap: 28px; padding-top: 36px; }
+            .product-images { max-width: 480px; margin: auto; }
+            .quick-start ol { grid-template-columns: 1fr; gap: 22px; }
+            .hero-downloads { flex-direction: column; align-items: stretch; max-width: 320px; }
+            .hero-downloads a { text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -402,9 +430,41 @@
             <img src="logo.png" alt="LessonOS logo">
             Lesson<span>OS</span>
         </div>
-        <p class="hero-tagline" data-en="Simple lesson management for training businesses" data-zh="简单易用的培训机构管理工具"></p>
-        <p class="hero-desc" data-en="Manage students, classes, attendance, and leave requests — all from your phone. No servers, no accounts, no complexity." data-zh="管理学员、课程、考勤和请假 — 全部在手机上完成。无需服务器，无需注册，简单高效。"></p>
+        <p class="hero-tagline" data-en="Attendance and class credits, without the paperwork" data-zh="考勤和课时管理，告别纸笔记录"></p>
+        <p class="hero-desc" data-en="Check members in, track remaining credits, and see who needs to renew — all on one phone. No login. Works offline." data-zh="签到、扣课时、查看即将到期的会员，全部在一部手机上完成。无需注册，离线也能用。"></p>
+        <div class="cta-badges hero-downloads">
+            <a class="cta-badge apple" href="https://apps.apple.com/app/lessonos/id6761799063" data-en="Download for iPhone &amp; iPad" data-zh="下载 iPhone 和 iPad 版"></a>
+            <a class="cta-badge" href="https://play.google.com/store/apps/details?id=com.cjtoolseram.lessonos" data-en="Get it on Google Play" data-zh="在 Google Play 下载"></a>
+        </div>
+        <p class="hero-free" data-en="Free for 15 students, 3 classes and 1 credit package. No card needed to start." data-zh="免费管理 15 名学员、3 个班级和 1 个课时套餐。开始使用无需绑定银行卡。"></p>
+        <a class="hero-guide" href="#quick-start" data-en="See how to take your first attendance ↓" data-zh="了解如何完成第一次签到 ↓"></a>
     </div>
+
+    <section class="product-proof" aria-labelledby="proof-title">
+        <div>
+            <p class="eyebrow" data-en="FOR OWNER-OPERATED STUDIOS" data-zh="为亲自管理教学的小型工作室而设计"></p>
+            <h1 id="proof-title" data-en="Teach the class. Let LessonOS keep the record." data-zh="专心上课，让 LessonOS 帮您做好记录。"></h1>
+            <p data-en="A simple tool for martial arts, dance, fitness and other small classes. Track attendance and class passes without a member app or a shared online system." data-zh="适合武术、舞蹈、健身等小班课程。管理考勤和课卡，无需会员另装应用，也无需共享在线系统。"></p>
+            <ul>
+                <li data-en="One-tap check-in with automatic credit deduction" data-zh="一键签到，自动扣除课时"></li>
+                <li data-en="See remaining credits and membership end dates" data-zh="查看剩余课时和会员到期日"></li>
+                <li data-en="Your roster stays on your device; optional backups are available with Pro" data-zh="学员数据保存在您的设备上；Pro 提供可选备份功能"></li>
+            </ul>
+            <p class="device-note" data-en="Available on iPhone, iPad and Android. Each device keeps its own data; backups do not provide live sync." data-zh="支持 iPhone、iPad 和安卓。每台设备独立保存数据，备份不等于实时同步。"></p>
+        </div>
+        <div class="product-images">
+            <figure><img src="images/checkin-ios.webp" width="420" height="910" alt="LessonOS on iPhone: class check-in and remaining credits"><figcaption data-en="iPhone" data-zh="iPhone"></figcaption></figure>
+            <figure><img src="images/checkin-android.webp" width="420" height="933" alt="LessonOS on Android: class check-in and remaining credits"><figcaption data-en="Android" data-zh="安卓"></figcaption></figure>
+        </div>
+    </section>
+    <section id="quick-start" class="quick-start" aria-labelledby="quick-title">
+        <h2 id="quick-title" data-en="Your first class, in three steps" data-zh="三步开始管理您的课程"></h2>
+        <ol>
+            <li><strong data-en="Add your students" data-zh="添加学员"></strong><p data-en="Start with a name. Add credits, dates and contact details when you need them." data-zh="只需姓名即可开始，需要时再填写课时、日期和联系方式。"></p></li>
+            <li><strong data-en="Create a class and enroll members" data-zh="创建班级并添加学员"></strong><p data-en="Choose the class days and time, then select who attends it." data-zh="设置上课日期和时间，再选择参加该班的学员。"></p></li>
+            <li><strong data-en="Tap to check in" data-zh="点击签到"></strong><p data-en="Open Check-in, choose the class and mark who came. Credit balances update automatically." data-zh="打开签到页面，选择班级并记录到课学员，课时余额自动更新。"></p></li>
+        </ol>
+    </section>
 
     <div class="features-section">
         <div class="features">
@@ -533,7 +593,7 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="support">
         <a href="https://lessonos.app/privacy.html" data-en="Privacy Policy" data-zh="隐私政策"></a>
         <a href="https://lessonos.app/terms.html" data-en="Terms of Use" data-zh="使用条款"></a>
         <a href="mailto:cjtoolseram@gmail.com" data-en="Contact Support" data-zh="联系支持"></a>
