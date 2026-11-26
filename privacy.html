@@ -79,7 +79,7 @@
     <p class="back-link"><a href="https://lessonos.app">&larr; Back to LessonOS</a></p>
 
     <h1>Privacy Policy for LessonOS</h1>
-    <p class="last-updated"><strong>Last Updated:</strong> September 24, 2026</p>
+    <p class="last-updated"><strong>Last Updated:</strong> November 26, 2026</p>
 
     <h2>1. Introduction</h2>
     <p>This Privacy Policy explains what information the LessonOS mobile application for Android and iOS (the "App") handles, where it goes, and the choices you have. The App is provided by Chumphon Jan Toolseram ("we", "our", or "us"). It forms part of our <a href="https://lessonos.app/terms.html">Terms of Use</a>.</p>
@@ -99,7 +99,7 @@
     <ul>
         <li>This data is <strong>not</strong> sent to us or to Firebase. We have no server that could receive it.</li>
         <li>No login or account is needed to use the App.</li>
-        <li>It leaves your device only if you choose to back it up, export it, or if your device's own backup system copies it (see sections 5 and 6).</li>
+        <li>It leaves your device only if you choose to back it up, export or share it, or if your device's own backup system copies it (see sections 5 and 6).</li>
     </ul>
     <p>If you record information about other people, such as students or their parents, you are responsible for having the right to do so under the privacy laws that apply to you.</p>
 
@@ -139,6 +139,11 @@
     </ul>
     <p>We use this information only to understand and improve the App and to fix problems. We do not sell it and we do not use it for advertising.</p>
 
+    <h3>QR check-in camera and Android ML Kit</h3>
+    <p>From version 1.15.0, QR check-in requests camera permission when you open the scanner. The App processes camera frames on your device to read membership cards; it does not record camera video or send camera images or decoded membership-card values to us. No student account or separate student app is needed. Camera access is not used for face recognition.</p>
+    <p>On Android, scanning uses Google's bundled ML Kit barcode-scanning SDK. Google documents collection of device and app information, per-installation identifiers, performance metrics, API configuration, input/output sizes, feature versions, event types and error codes for diagnostics and usage analytics. This technical information is encrypted in transit using HTTPS. See <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank">ML Kit's data-disclosure guide</a>. On iOS, QR reading uses Apple's on-device camera APIs.</p>
+    <p>A membership QR contains an opaque random credential, not the member's name or contact details. The shared card image also displays the member's name outside the QR. The credential stays in your local database and any backups you create. If you choose to share an image, the image goes to the app or recipient you select under that service's privacy practices. A card can be copied; replacement invalidates it only in the current database, and restoring an older backup can restore an older credential. QR check-in records attendance locally and does not synchronize devices.</p>
+
     <h2>4. Purchases</h2>
     <p>LessonOS Pro is sold as an auto-renewing subscription (monthly or yearly) or a one-time lifetime purchase. Payments are processed entirely by Google Play (Android) or the Apple App Store (iOS).</p>
     <ul>
@@ -174,7 +179,7 @@
     <h2>7. Who we share data with</h2>
     <p>We do not sell or rent personal information, and we do not share it for advertising. Information reaches third parties only as described above:</p>
     <ul>
-        <li><strong>Google</strong>: Firebase Analytics and Crashlytics (both platforms), Google Play purchases, and Google Drive backups and Android Auto Backup if you use them.</li>
+        <li><strong>Google</strong>: Firebase Analytics and Crashlytics (both platforms), ML Kit technical diagnostics (Android QR scanning), Google Play purchases, and Google Drive backups and Android Auto Backup if you use them.</li>
         <li><strong>Apple</strong>: App Store purchases, and iCloud backups if you use them.</li>
     </ul>
     <p>We may disclose information if required by law.</p>
